@@ -9,14 +9,28 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.10",
+    "firebase": "^9.17.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-watch": "^1.1.0",
+    "jquery": "^3.6.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-google-button": "^0.7.2",
+    "react-top-loading-bar": "^2.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "autoprefixer": "^10.4.13",
+    "postcss-cli": "^10.1.0",
+    "tailwind": "^4.0.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4"
   }
 }
