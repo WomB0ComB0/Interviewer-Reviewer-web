@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+cohere = "*"
+python-dotenv = "*"
+flask = "*"
+waitress = "*"
+sqlalchemy = "*"
+psycopg2 = "*"
+click = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

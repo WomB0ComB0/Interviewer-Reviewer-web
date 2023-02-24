@@ -2,6 +2,9 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg'
 import './App.css';
 
+// Fix refers to a UMD global, but the current file is a module
+// https://stackoverflow.com/questions/56238356/understanding-umd-and-esm-exports
+
 function App () {
   const [count, setCount] = useState(0)
 

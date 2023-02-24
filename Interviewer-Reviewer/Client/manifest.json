@@ -1,0 +1,100 @@
+{
+    "name": "Interviewer Reviewer web",
+    "short_name": "Interviewer Reviewer",
+    "start_url": ".",
+    "description": "Interviewer Reviewer is a web application that allows you to create and manage interviews and review the results.",
+    "scope": "/",
+    "orientation": "portrait-priamry",
+    "icons": [
+        {
+            "src": "Interviewer-Reviewer-logo512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "Interviewer-Reviewer-logo384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "Interviewer-Reviewer-logo256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "Interviewer-Reviewer-logo192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "Interviewer-Reviewer-logo128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "Interviewer-Reviewer-logo96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "Interviewer-Reviewer-logo72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "Interviewer-Reviewer-logo48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "Interviewer-Reviewer-logo32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "Interviewer-Reviewer-logo24.png",
+            "type": "image/png",
+            "sizes": "24x24"
+        },
+        {
+            "src": "Interviewer-Reviewer-logo16.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "**/logo.svg",
+            "type": "image/svg+xml",
+            "sizes": "any",
+            "purpose": "maskable"
+        }
+    ],
+    "dir": "ltr",
+    "lang": "en-US",
+    "display_override": ["browser","minimal-ui","fullscreen"],
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "screenshots": {
+        "src": "screenshots/1.png",
+        "sizes": "1280x720",
+        "type": "image/png"
+    },  
+    "prefer_related_applications": false,
+    "serviceworker": {
+        "src": "service-worker.js",
+        "scope": "/",
+        "use_cache": false
+    },
+    "share_target": {
+        "action": "/share",
+        "method": "GET",
+        "enctype": "multipart/form-data",
+        "params": {
+            "title": "title",
+            "text": "text",
+            "url": "url"
+        }
+    },
+    "gcm_sender_id": "103953800507",
+    "gcm_user_visible_only": true
+}
