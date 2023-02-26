@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   
-  // Research 🫠, seems useful
+  // Research 🫠, seems useful. Look like an API route
   server: {
     proxy: {
       '/api': {

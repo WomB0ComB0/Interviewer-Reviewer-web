@@ -81,9 +81,9 @@
     },  
     "prefer_related_applications": false,
     "serviceworker": {
-        "src": "service-worker.js",
+        "src": "sw.js",
         "scope": "/",
-        "use_cache": false
+        "use_cache": true
     },
     "share_target": {
         "action": "/share",

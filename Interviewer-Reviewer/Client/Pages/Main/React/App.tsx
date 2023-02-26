@@ -1,29 +1,18 @@
+import { useState } from 'react';
 import React from 'react';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, signInWithPopup,GoogleAuthProvider } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import GoogleButton from 'react-google-button';
-// // Start writing functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
-const firebaseConfig = {
-  apiKey: "AIzaSyCt0sEUcmwMZAQS5MIzboK-N74iLtR0y1I",
-  authDomain: "interviewer-reviewer-477c0.firebaseapp.com",
-  databaseURL: "https://interviewer-reviewer-477c0-default-rtdb.firebaseio.com",
-  projectId: "interviewer-reviewer-477c0",
-  storageBucket: "interviewer-reviewer-477c0.appspot.com",
-  messagingSenderId: "447937462786",
-  appId: "1:447937462786:web:8cff412ac13e4b188e9d1b",
-  measurementId: "G-12EBS82ELB"
-};
 
-const analytics = getAnalytics(app);
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
+import { getFunctions, httpsCallable } from "firebase/functions";
+import { getStorage } from "firebase/storage";
+
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import GoogleButton from 'react-google-button';
+
+
+// function App () {
+//   const [count, setCount] = useState(0)
 const provider = new GoogleAuthProvider();
 
 const App = () => {
@@ -57,7 +46,6 @@ const App = () => {
       <GoogleButton onClick={loginwithgoogle}/>
     </>
   );
-  console.log({ENV_VAR: import.meta.env.VITE_API_KEY})
 }
 
 export default App;
