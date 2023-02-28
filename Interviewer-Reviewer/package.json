@@ -11,7 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.11.10",
+    "@mui/material": "^5.11.11",
     "firebase": "^9.17.1",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-cli": "^1.4.3",
