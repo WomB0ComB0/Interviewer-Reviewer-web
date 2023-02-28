@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from '../../Global/Components/App';
 // Fix this
 // import reportWebVitals from 'Interviewer-Reviewer/Client/Pages/Global/Components/reportWebVitals.js';
 

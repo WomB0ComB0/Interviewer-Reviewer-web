@@ -1,6 +1,4 @@
-export {
-    default as InterviewerReviewerClientGlobalIndex
-} from './InterviewerReviewerClientGlobalIndex';
+export {};
 
 declare global {
     namespace JSX {

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
+
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, signInWithPopup,GoogleAuthProvider } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -16,6 +16,7 @@ import GoogleButton from 'react-google-button';
 const provider = new GoogleAuthProvider();
 
 const App = () => {
+    
   function loginwithgoogle() {
     try {
       signInWithPopup(auth, provider);
@@ -24,7 +25,7 @@ const App = () => {
       console.log(error);
     }
   }
-
+  
   function handleSubmit(e): void {
     const email = e.target[0].value;
     const password = e.target[1].value;

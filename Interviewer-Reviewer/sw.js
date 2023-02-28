@@ -1,17 +1,16 @@
-// Reinstalled whenever the file is changed and saved
-self.addEventListener('install', evt => {
+self.addEventListener('install', evt => { // Reinstalled whenever the file is changed and saved
     console.log('Service Worker: installed');
 });
 
-// Add assets to the cache
 const staticCacheName = 'site-static-v1';
 const dynamicCacheName = 'site-dynamic-v1';
-const cacheAssets = [
+const cacheAssets = [   // Add assets to the cache
     // Storing the request URLS <-- use relative path
     '/',
     'https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap',
     // Icons
-    'fallback.html'
+    'fallback.html',
+    '404.html',
     // 'index.html',
     // 'about.html',
     // '/css/style.css',

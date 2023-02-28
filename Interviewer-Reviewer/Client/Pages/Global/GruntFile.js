@@ -10,8 +10,9 @@ module.exports = function (grunt) {
         },
         watch: {
             styles: {
-                files: ['./global.css','./index.css'],
+                files: ['./global.css'],
                 tasks: ['autoprefixer']
+                // Add other styles later (if needed)
             }
         }
     });

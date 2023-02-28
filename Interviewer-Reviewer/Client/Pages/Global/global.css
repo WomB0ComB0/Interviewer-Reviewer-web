@@ -2,7 +2,13 @@
 * {overflow:hidden;scroll-behavior:smooth;margin:0;padding:0;box-sizing:border-box;font-family: 'Familjen Grotesk', sans-serif;transition:0.25s all ease;list-style:none;text-decoration: none;}
 :root {font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;line-height: 1.5;font-weight: 400;
 --light-light-theme:#78c0e0;
---light-dark-theme:#---;
+--light-medium-theme:#5eafd9;
+--light-dark-theme:#449dd1;
+--dark-light-theme:#150578;
+--dark-medium-theme:#120a65;
+--dark-dark-theme:#0e0e52;
+--middle-color:#192bc2;
+--accent-color:#ffd700;
 color-scheme: light dark;color: rgba(255, 255, 255, 0.87);background-color: #242424;
 font-synthesis: none;
 text-rendering: optimizeLegibility;
