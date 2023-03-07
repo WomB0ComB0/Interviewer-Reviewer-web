@@ -1,10 +1,10 @@
 # Security Policy
+
 This application is using SNYK, and I througoughly go through ever file to see if there are vulnerabilities within the code that might compromise the application (by any means what so ever) or me.
+
 ## Supported Versions
 
-
 This application is within it's development phase, and will not be fully 'decked' out until the forseeable summer of 2023
-
 **Ignore this section for now**
 | Version | Supported          |
 | ------- | ------------------ |
