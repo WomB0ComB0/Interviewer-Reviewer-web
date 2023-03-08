@@ -2,13 +2,14 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFunctions, httpsCallable } from "firebase/functions";
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState, lazy, Suspense, useEffect } from "react";
 import { getStorage } from "firebase/storage";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
-import GoogleButton from 'react-google-button';
+import GoogleButton from "react-google-button";
 // import { getDatabase, ref, set } from "firebase/database"; // import { getMessaging, getToken, onMessage } from "firebase/messaging"; // import { getPerformance } from "firebase/performance"; // import { getRemoteConfig, fetchConfig, activate } from "firebase/remote-config"; // import { getInstallations } from "firebase/installations";
-import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
+import NotFound from '../../404'
 
 const provider = new GoogleAuthProvider();
 
@@ -24,44 +25,43 @@ const Contact = () => {
   return <h1>Welcome to the Contact page!</h1>;
 };
 
-const NotFound = () => {
-  return <h1>404.. This page is not found!</h1>;
+const Offline = () => {
+  return <h1>Welcome to the Offline page!</h1>;
 };
+
 
 const App = () => {
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+
+  useEffect(()=>{
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+
+  },[])
+
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes> 
-    </Router>
+    <>
+      {!isOnline ? 
+        <Offline/> :
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes> 
+          </Router>
+      }
+    </>
   );
 };
-
-const App = () => {
-  const [count, setCount] = useState(0)
-  const [user, setUser] = useState(null);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-  const [hasAccount, setHasAccount] = useState(false);
-  const [userEmail, setUserEmail] = useState('');
-  const [userPassword, setUserPassword] = useState('');
-  const [userEmailError, setUserEmailError] = useState('');
-  const [userPasswordError, setUserPasswordError] = useState('');
-  const [userHasAccount, setUserHasAccount] = useState(false);
-  return (
-    <div>
-      {/* <LoadingBar></LoadingBar> */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <LazyComponent />
-      </Suspense>
-    </div>
-  );
-};
-
 export default App;

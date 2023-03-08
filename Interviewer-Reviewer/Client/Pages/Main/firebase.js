@@ -1,7 +1,7 @@
-import firebase from "firebase/app"
-import "firebase/auth"
-import "firebase/firestore"
-import "firebase/analytics"
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import "firebase/analytics";
 
 const app = firebase.initializeApp ({
     apiKey: process.env.VITE_INTERVIEWER_REVIEWER_WEB_FIREBASE_API_KEY,
@@ -14,7 +14,7 @@ const app = firebase.initializeApp ({
     measurementId:process.env.VITE_INTERVIEWER_REVIEWER_WEB_FIREBASE_MEASUREMENT_ID
   });
 
-export const auth = get.auth()
-export const db = get.firestore()
-export const analytics = get.analytics()
-export default app
+export const auth = get.auth();
+export const db = get.firestore();
+export const analytics = get.analytics();
+export default app;

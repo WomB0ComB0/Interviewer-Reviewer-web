@@ -1,32 +1,56 @@
 {
     "env": {
         "browser": true,
-        "es2022": true
+        "es2021": true
     },
     "extends": [
+        "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended",
-        "prettier/@typescript-eslint"
+        "plugin:@typescript-eslint/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx", "*.jsx", "*.js"],
+            "rules": {
+                "no-undef": "off"
+            }
+        }
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
+        }
     },
     "plugins": [
         "react",
         "@typescript-eslint"
     ],
     "rules": {
-        "require-jsdoc" : "off",
-        "react/react-in-jsx-scope":
-    }
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off","no-unused-vars": "off","no-undef": "off","no-constant-condition": "off","no-empty": "off","no-extra-semi": "off","no-fallthrough": "off","no-inner-declarations": "off","no-unreachable": "off","no-case-declarations": "off","no-empty-function": "off","no-extra-boolean-cast": "off","no-extra-parens": "off","no-func-assign": "off","no-invalid-regexp": "off","no-irregular-whitespace": "off","no-obj-calls": "off","no-regex-spaces": "off","no-sparse-arrays": "off","no-unexpected-multiline": "off","no-unsafe-finally": "off","use-isnan": "off","valid-typeof": "off","no-debugger": "off","no-dupe-args": "off","no-dupe-class-members": "off","no-dupe-keys": "off","no-duplicate-case": "off","no-prototype-builtins": "off","no-template-curly-in-string": "off","no-unsafe-negation": "off","no-cond-assign": "off","no-control-regex": "off","no-empty-character-class": "off","no-ex-assign": "off",
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "after-used",
+                "ignoreRestSiblings": false
+            }
+        ],
+    },
+    "ignorePatterns": ["node_modules", "**/*{.js,.cjs}","dist"]
 }

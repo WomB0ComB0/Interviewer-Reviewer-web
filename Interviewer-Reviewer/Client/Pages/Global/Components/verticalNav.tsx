@@ -1,6 +1,3 @@
-import React from 'react';
-import App from '../../Global/Components/App';
-
 const VerticalNav = () => {
     return (
         <div className="vertical-nav">
@@ -13,10 +10,7 @@ const VerticalNav = () => {
                 </a>
             </div>
         </div>
-        // <div>
-        //     <App />
-        // </div>
-    )
-}
+    );
+};
 
 export default VerticalNav;

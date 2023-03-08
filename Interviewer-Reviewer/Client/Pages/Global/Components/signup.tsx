@@ -1,6 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from '../../Global/Components/App';
+import React from "react";
+import App from "../../Global/Components/App";
 
 const Signup = () => {
     return (
@@ -8,6 +7,6 @@ const Signup = () => {
             <App />
         </div>
     );
-}
+};
 
 export default Signup;
