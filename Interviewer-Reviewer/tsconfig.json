@@ -15,9 +15,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    
+    "paths": {
+      "@/*": ["./Client/**/*"]
+    },
+    "types": ["vite-plugin-react", "vite-plugin-typescript"]
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*/.jsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
-// I can
