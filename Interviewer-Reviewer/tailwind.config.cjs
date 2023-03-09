@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
+  purge: {
+    enabled: true,
+  },
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   presets: [],
   darkMode: "media", // or 'class'
@@ -28,6 +32,7 @@ module.exports = {
       red: colors.red,
       orange: colors.orange,
       amber: colors.amber,
+      gold: colors.gold,
       yellow: colors.yellow,
       lime: colors.lime,
       green: colors.green,

@@ -16,7 +16,7 @@ const InputWithError = () => {
 		});
 	};
   
-	const handleSubmit = (event) => {
+	const handleSubmit = (event : any) => {
 		event.preventDefault();
 		if (formValues.username === "") {
 			setFormValues({
