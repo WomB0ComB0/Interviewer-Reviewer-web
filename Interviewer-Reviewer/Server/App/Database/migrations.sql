@@ -14,3 +14,5 @@ CREATE TABLE IF NOT EXISTS responses (
   "sentiment" VARCHAR(10) NOT NULL,
   "createdAt" BIGINT NOT NULL
 );
+
+
