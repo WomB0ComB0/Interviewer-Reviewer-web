@@ -21,7 +21,7 @@
     "paths": {
       "@/*": ["./Client/*"]
     },
-    "types": ["vite-plugin-react", "vite-plugin-typescript"]
+    "types": ["vite-plugin-react", "vite-plugin-typescript", "jest"]
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*/.jsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
