@@ -1002,5 +1002,7 @@ module.exports = {
       "-10": "-10"
     }
   },
+  variants: {},
+  corePlugins: {},
   plugins: [],
 };
