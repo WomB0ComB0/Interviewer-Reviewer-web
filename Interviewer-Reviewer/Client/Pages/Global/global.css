@@ -16,7 +16,6 @@ text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 -webkit-text-size-adjust: 100%;}
 
-
 body {display:flex;min-width:320px;min-height: 100vh;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
 {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
@@ -24,21 +23,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* font */
 @font-face {font-family: 'Familjen Grotesk';src: url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    font-weight: normal;
+    font-weight: 100 900;
+    font-display: swap;
     font-style: normal;}
 @font-face {font-family: 'Inter';src: url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    font-weight: normal;
+    font-weight: 100 900;
+    font-display: swap;
     font-style: normal;}
 @font-face {font-family: 'Lato';src: url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    font-weight: normal;
+    font-weight: 100 900;
+    font-display: swap;
     font-style: normal;}
 @font-face {font-family: 'PT Sans';src: url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    font-weight: normal;
+    font-weight: 100 900;
+    font-display: swap;
     font-style: normal;}
 /* Responsive mania */
-@media screen and (max-width: 320px) {
-    /* styles for screens smaller than 320px; */
-}
+@media screen and (max-width: 320px) {/* styles for screens smaller than 320px; */}
 @media screen and (min-width: 321px) and (max-width: 480px) {/* styles for screens between 321px and 480px; */}
 @media screen and (min-width: 481px) and (max-width: 768px) {/* styles for screens between 481px and 768px; */}
 @media screen and (min-width: 769px) and (max-width: 1024px) {/* styles for screens between 769px and 1024px; */}
@@ -48,8 +49,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @media screen and (min-width: 1681px) and (max-width: 1920px) {/* styles for screens between 1681px and 1920px; */}
 @media screen and (min-width: 1921px) and (max-width: 2560px) {/* styles for screens between 1921px and 2560px; */}
 @media screen and (min-width: 2561px) {/* styles for screens larger than 2561px; */}
-
-
 /* Dark mode */
 @media(prefers-color-scheme:dark){}
 /* Light mode */
@@ -65,7 +64,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* No support */
 @media not all and (prefers-color-scheme:no-preference){}
 
-
+@media (prefers-reduced-motion: no-preference){}
+@media (prefers-reduced-motion: reduce){}
 /* All of these should go into all of the prefers-color-scheme medias, as it'll be constantly changing based on the user's preference
 alternatively: this can be done in JS or TS
 */

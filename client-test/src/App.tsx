@@ -1,6 +1,5 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import Kyoshi from "./component/Nicole";
 import Mike from  "./component/Mike";
 import AuthContainer from "./component/AuthContainer";
 import "./App.css";
