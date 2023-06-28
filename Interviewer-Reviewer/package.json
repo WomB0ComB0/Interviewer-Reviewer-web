@@ -14,7 +14,7 @@
     "prepare": "husky install .config/husky"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.6",
+    "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.12",
     "firebase": "^9.17.2",
