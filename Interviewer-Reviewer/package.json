@@ -22,7 +22,7 @@
     "grunt-cli": "^1.4.3",
     "grunt-contrib-watch": "^1.1.0",
     "jquery": "^3.6.4",
-    "react": "^18.2.0",
+    "react": "^19.1.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-google-button": "^0.7.2",
